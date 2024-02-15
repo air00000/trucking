@@ -1,0 +1,101 @@
+
+.modal{
+  @apply flex items-center justify-center flex-wrap fixed top-0 left-0 bg-zinc-900/[.50] py-10 backdrop-blur-sm hidden w-full h-full;
+}
+
+.title{
+  @apply flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600;
+}
+
+.modal.active{
+  @apply flex scale-100 overflow-x-hidden overflow-y-auto;
+  -ms-overflow-style: none;
+}
+
+.modal_window{
+  @apply flex items-center justify-center bg-white w-full h-5/6 max-w-fit md:h-auto rounded-2xl overflow-auto px-12;
+  -ms-overflow-style: none;
+}
+
+.modal.active::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+
+/*
+.modal{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal.active{
+  display: flex;
+  transform: scale(1);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal_window{
+  display: flex;
+  height: 95vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  gap: 30px;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.modal_window::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.modal_content{
+  flex-direction: column;
+  display: flex;
+  padding-top: 200px;
+  gap: 30px;
+}
+
+.form_label{
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.form_input {
+  display: flex;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.form_input:focus {
+  box-shadow: 0px 0px 8px 4px rgba(82, 249, 72, 0.33);
+}
+
+.form_input input[type=file]{
+  border: none;
+}
+*/
