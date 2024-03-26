@@ -1,0 +1,24 @@
+.input_wrapper {
+  border: 1px solid rgba(0, 66, 105, 0.28);
+  border-radius: 4px;
+  @apply flex focus:ring-blue-500 focus:border-blue-500 bg-white
+}
+
+.label {
+  color: rgba(0, 32, 51, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  padding-bottom: 8px;
+}
+
+.select {
+  color: #002033;
+  @apply border rounded-lg block w-full text-sm p-2.5
+}
+
+.placeholder {
+  color: rgba(0, 32, 51, 0.35);
+  @apply inline-flex items-center px-3 text-sm
+}
+
