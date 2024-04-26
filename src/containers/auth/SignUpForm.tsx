@@ -7,10 +7,34 @@ import {InputNumber} from "../../components/form/InputNumber";
 export default function SignUpForm() {
 
     const [isUsePhone, setIsUsePhone] = useState(false)
+    const [firstName, setFirstName] = useState("");
+    const [secondName, setSecondName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [password, setPassword] = useState("");
 
     function handleChangeSignInMethod()  {
         setIsUsePhone(!isUsePhone)
     }
+
+    async function SignIn(email: string, password: string) {
+        const response = await fetch("http://localhost:3000/auth/signin", {
+            method: "POST",
+            headers: new Headers({
+                    "Host": "http://localhost:3000",
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                }
+            ),
+            body: JSON.stringify({
+                "email": email.toString(),
+                "password": password.toString()
+            })
+        })
+            .then((response) => response.json())
+            .catch(it => console.log(it))
+    }
+
 
     return (
         <div
